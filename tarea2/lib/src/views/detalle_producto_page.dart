@@ -26,7 +26,6 @@ class DetalleProductoPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Container(
-            //color: Colors.amberAccent,
             padding: EdgeInsets.all(5),
             child: Column(
               mainAxisSize: MainAxisSize.min,

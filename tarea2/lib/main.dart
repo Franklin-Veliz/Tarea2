@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       routerConfig: router,
-      // home: HomePage(),
+      //home: HomePage(),
     );
   }
 }

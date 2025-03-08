@@ -12,8 +12,8 @@ class SideMenu extends StatelessWidget {
         child: ListView(
           children: [
             HeaderSideMenu(
-              title: 'Enrique Alvarenga',
-              email: 'enrique@mail.com',
+              title: 'Pedro Manuel',
+              email: 'pedroManu@mail.com',
             ),
             ListTile(
               leading: Icon(Icons.home),
