@@ -22,143 +22,147 @@ class DetalleProductoPage extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Container(
-            padding: EdgeInsets.all(5),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Center(
-                  child: Image.network(
-                    extras?["image"],
-                    height: 200,
-                    fit: BoxFit.fill,
+        children: [
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(5),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Center(
+                    child: Image.network(
+                      extras?["image"],
+                      height: 200,
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Center(
-                        child: Image.network(
-                          extras?["image"],
-                          height: 80,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Center(
-                        child: Image.network(
-                          extras?["image"],
-                          height: 80,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Center(
-                  child: Row(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                              child: Icon(
-                            Icons.star,
-                            color: Colors.orange,
-                            size: 15,
-                          )),
-                          Container(
-                            child: Text(
-                              "${extras?["rating"]["rate"]}",
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.amber),
-                            ),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Image.network(
+                            extras?["image"],
+                            height: 80,
+                            fit: BoxFit.fill,
                           ),
-                        ],
-                      ),
-                      Container(
-                        child: Row(
+                        ),
+                        Center(
+                          child: Image.network(
+                            extras?["image"],
+                            height: 80,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Center(
+                    child: Row(
+                      children: [
+                        Row(
                           children: [
-                            Text("    "),
                             Container(
-                              child: TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "${extras?["rating"]["count"]} reviews",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: const Color.fromARGB(
-                                            255, 18, 17, 17)),
-                                  )),
-                            )
+                                child: Icon(
+                              Icons.star,
+                              color: Colors.orange,
+                              size: 15,
+                            )),
+                            Container(
+                              child: Text(
+                                "${extras?["rating"]["rate"]}",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.amber),
+                              ),
+                            ),
                           ],
                         ),
-                      )
-                    ],
+                        Container(
+                          child: Row(
+                            children: [
+                              Text("    "),
+                              Container(
+                                child: TextButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "${extras?["rating"]["count"]} reviews",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: const Color.fromARGB(
+                                            255, 18, 17, 17),
+                                      ),
+                                    )),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          ' ${extras?['title']}',
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            ' ${extras?['title']}',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.circle),
-                        color: Colors.black,
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.circle),
-                        color: Colors.grey,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Text('${extras?['description']}'),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Text(
-                        "USD${extras?["price"]}",
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
-                      ),
-                      Text("  "),
-                      ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 22, 21, 21),
-                              shape: RoundedRectangleBorder()),
+                        IconButton(
                           onPressed: () {},
-                          child: Text(
-                            "  Add to cart ",
-                            style: TextStyle(
-                                color: const Color.fromARGB(221, 248, 242, 242),
-                                fontWeight: FontWeight.bold),
-                          )),
-                    ],
+                          icon: Icon(Icons.circle),
+                          color: Colors.black,
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.circle),
+                          color: Colors.grey,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  Container(
+                    child: Text('${extras?['description']}'),
+                  ),
+                  Container(
+                    child: Row(
+                      children: [
+                        Text(
+                          "USD${extras?["price"]}",
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        Text("  "),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 22, 21, 21),
+                                shape: RoundedRectangleBorder()),
+                            onPressed: () {},
+                            child: Text(
+                              "  Add to cart ",
+                              style: TextStyle(
+                                  color:
+                                      const Color.fromARGB(221, 248, 242, 242),
+                                  fontWeight: FontWeight.bold),
+                            )),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

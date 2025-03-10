@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redit_clone/src/router/routes.dart';
+//import 'package:redit_clone/src/views/home_page.dart';
 
 void main() => runApp(MyApp());
 

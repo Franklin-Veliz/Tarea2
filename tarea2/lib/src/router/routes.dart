@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 //import 'package:redit_clone/src/api/productos.dart';
 import 'package:redit_clone/src/views/detalle_producto_page.dart';
 import 'package:redit_clone/src/views/home_page.dart';
-//import 'package:redit_clone/src/views/login_page.dart';
+import 'package:redit_clone/src/views/login_page.dart';
 
 final router = GoRouter(
   initialLocation: '/productos',
@@ -29,9 +29,9 @@ final router = GoRouter(
         )
       ],
     ),
-    /*GoRoute(
+    GoRoute(
         path: '/login',
         name: 'login',
-        builder: (context, settings) => LoginPage())*/
+        builder: (context, settings) => LoginPage()),
   ],
 );
